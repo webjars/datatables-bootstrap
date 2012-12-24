@@ -70,7 +70,7 @@
                         <configuration>
                             <url>${upstream.url}</url>
                             <fromFile>WEBJAR_ID.js</fromFile>
-                            <toDir>${base.dir}</toDir>
+                            <toDir>${destDir}</toDir>
                         </configuration>
                     </execution>
                     <execution>
@@ -82,7 +82,7 @@
                         <configuration>
                             <url>${upstream.url}</url>
                             <fromFile>WEBJAR_ID.min.js</fromFile>
-                            <toDir>${base.dir}</toDir>
+                            <toDir>${destDir}</toDir>
                         </configuration>
                     </execution>
                 </executions>
