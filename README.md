@@ -1,5 +1,5 @@
-WebJar for Highlight.js
+WebJar for WEBJAR_NAME
 
 More info: http://webjars.org
 
-Upstream: http://softwaremaniacs.org/soft/highlight/en/description/
+Upstream: WEBJAR_URL
