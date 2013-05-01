@@ -10,88 +10,45 @@
 
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
-    <artifactId>WEBJAR_ID</artifactId>
-    <version>UPSTREAM_VERSION-SNAPSHOT</version>
-    <name>WEBJAR_NAME</name>
-    <description>WebJar for WEBJAR_NAME</description>
+    <artifactId>datatables-bootstrap</artifactId>
+    <version>2-20120201-SNAPSHOT</version>
+    <name>DataTables - Bootstrap</name>
+    <description>WebJar for DataTables - Bootstrap</description>
     <url>http://webjars.org</url>
 
     <developers>
         <developer>
-            <id>YOUR_ID</id>
-            <name>YOUR_NAME</name>
-            <email>YOUR_EMAIL</email>
+            <id>jamesward</id>
+            <name>James Ward</name>
+            <email>james@jamesward.com</email>
         </developer>
     </developers>
 
     <licenses>
         <license>
-            <name>UPSTREAM_LICENSE_NAME</name>
-            <url>UPSTREAM_LICENSE_VERSION</url>
+            <name>None</name>
+            <url>http://www.datatables.net/blog/Twitter_Bootstrap_2</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
 
     <scm>
-        <url>http://github.com/webjars/WEBJAR_ID</url>
-        <connection>scm:git:https://github.com/webjars/WEBJAR_ID.git</connection>
-        <developerConnection>scm:git:https://github.com/webjars/WEBJAR_ID.git</developerConnection>
+        <url>http://github.com/webjars/datatables-bootstrap</url>
+        <connection>scm:git:https://github.com/webjars/datatables-bootstrap.git</connection>
+        <developerConnection>scm:git:https://github.com/webjars/datatables-bootstrap.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
     
-    <dependencies>
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>ANOTHER_WEBJAR_ID</artifactId>
-            <version>ANOTHER_WEBJAR_VERSION</version>
-        </dependency>
-    </dependencies>
-    
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>UPSTREAM_VERSION</upstream.version>
-        <upstream.url>UPSTREAM_URL</upstream.url>
-        <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destDir>
     </properties>
     
     <build>
         <plugins>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>wagon-maven-plugin</artifactId>
-                <version>1.0-beta-4</version>
-                <executions>
-                    <execution>
-                        <id>download-full-js</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>download-single</goal>
-                        </goals>
-                        <configuration>
-                            <url>${upstream.url}</url>
-                            <fromFile>WEBJAR_ID.js</fromFile>
-                            <toDir>${destDir}</toDir>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>download-min-js</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>download-single</goal>
-                        </goals>
-                        <configuration>
-                            <url>${upstream.url}</url>
-                            <fromFile>WEBJAR_ID.min.js</fromFile>
-                            <toDir>${destDir}</toDir>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.3.2</version>
+                <version>2.4.1</version>
             </plugin>
         </plugins>
     </build>
