@@ -16,6 +16,14 @@
     <description>WebJar for DataTables - Bootstrap</description>
     <url>http://webjars.org</url>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>1.8.2</version>
+        </dependency>
+    </dependencies>
+
     <developers>
         <developer>
             <id>jamesward</id>
@@ -41,6 +49,8 @@
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <upstreamVersion>2-20120201</upstreamVersion>
+        <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
     </properties>
     
     <build>
@@ -51,6 +61,12 @@
                 <version>2.4.1</version>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <targetPath>${destDir}</targetPath>
+            </resource>
+        </resources>
     </build>
 
 </project>
